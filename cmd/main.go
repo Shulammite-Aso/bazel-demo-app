@@ -21,6 +21,8 @@ func main() {
 
 	address := ":5000"
 
+	log.Printf("server started at port %v\n", address)
+
 	err := http.ListenAndServe(address, router)
 
 	if errors.Is(err, http.ErrServerClosed) {
